@@ -2,6 +2,7 @@
     BHVR's Notification system implementation.
 */
 #pragma once
+#include "Notification.hpp"
 #include <iostream>
 #include <cstdlib>
 
