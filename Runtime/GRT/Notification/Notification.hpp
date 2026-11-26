@@ -9,7 +9,6 @@ namespace BHVR {
             LOG,
             WARNING,
             LIGHT_ERROR,
-            NORM_ERROR,
             FATAL_ERROR
         };
         void WriteMessage(Type type, const char *MSG);

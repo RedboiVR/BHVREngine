@@ -8,12 +8,6 @@
 
 namespace BHVR {
     namespace Notification {
-        enum class Type {
-            LOG,
-            WARNING,
-            LIGHT_ERROR,
-            FATAL_ERROR
-        };
         void WriteMessage(Type type, const char *MSG){
             switch(type) {
                 case Type::LOG:
@@ -27,7 +21,7 @@ namespace BHVR {
                     break;
                 case Type::FATAL_ERROR:
                     std::cout << "!! " << MSG << '\n';
-                    std::exit(1);
+                    std::exit(EXIT_FAILURE);
             }
         }
     }

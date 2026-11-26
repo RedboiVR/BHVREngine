@@ -3,8 +3,6 @@
 */
 #pragma once
 #include <string>
-#include <string_view>
-#include <filesystem>
 
 namespace BHVR {
     namespace EngineDefinitions {
@@ -15,7 +13,7 @@ namespace BHVR {
         namespace Engine {
             // Metadata
             // The name of the BHVR Engine
-            inline constexpr std::string_view name = "BHVR Engine";
+            inline const std::string name = "BHVR Engine";
             // Major version.
             inline constexpr int VER_MAJOR = 1;
             // Minor version.
@@ -25,19 +23,19 @@ namespace BHVR {
         }  
 
         /*
-            Path Configs.
+            Directory Configs.
         */
-        namespace Paths {
+        namespace Directories {
             /*
             Game path. Automatically set when loading or
             creating a game.
             */
-            inline std::filesystem::path GAME_PATH;
+            std::string GAME_PATH;
             /*
             Engine path. Where the engine is currently
             located.
             */
-            inline std::filesystem::path ENG_PATH;
+            std::string ENG_PATH;
         }
 
         /*
@@ -51,12 +49,12 @@ namespace BHVR {
             Lua path. Uses lua to compile every lua source file
             to luac.
             */
-            inline std::filesystem::path L_PATH;
+            std::string L_DIR;
             /*
             Lua output path. Automatically set as the game
             path.
             */
-            inline std::filesystem::path L_O_PATH;
+            std::string L_O_PATH;
             /*
             Lua compiler. Default is set as "luac".
             */
